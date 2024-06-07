@@ -1,0 +1,28 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "a88c782ceae4e6da9c7a68d5e74497af"
+name = "custom-designs-proof"
+handle = "custom-designs-proof"
+application_url = "https://containers-kb-viewer-florists.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "customdesignsverifier.myshopify.com"
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_customers,read_files,read_orders,read_themes,write_files,write_order_edits,write_orders"
+
+[auth]
+redirect_urls = [
+  "https://containers-kb-viewer-florists.trycloudflare.com/auth/callback",
+  "https://containers-kb-viewer-florists.trycloudflare.com/auth/shopify/callback",
+  "https://containers-kb-viewer-florists.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-04"
+
+[pos]
+embedded = false
